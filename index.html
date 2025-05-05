@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FiliPasta Con Salsa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f1e4;
+      color: #333;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    header {
+      background-color: #d9342b;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .hamburger {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+    nav {
+      background-color: #d9342b;
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      transition: left 0.3s ease;
+      padding-top: 60px;
+      z-index: 999;
+    }
+    nav a {
+      display: block;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #bb2b24;
+    }
+    .nav-open {
+      left: 0;
+    }
+    main {
+      padding: 20px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .hidden {
+      display: none;
+    }
+    img.logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #d9342b;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin: 20px 0;
+    }
+    .menu-image {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 20px auto;
+      border: 4px solid #d9342b;
+      border-radius: 20px;
+    }
+    .menu-desc {
+      background-color: #ffe6dc;
+      padding: 15px;
+      border-radius: 15px;
+      margin: 10px auto;
+      max-width: 700px;
+      font-size: 18px;
+    }
+    .contact-img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 20px auto;
+      border: 4px solid #d9342b;
+      border-radius: 20px;
+    }
+    .contact-info {
+      font-size: 18px;
+      background-color: #ffe6dc;
+      padding: 15px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <h1>FiliPasta Con Salsa</h1>
+  </header>
+
+  <nav id="sideMenu">
+    <a href="#" onclick="showTab('home')">Home</a>
+    <a href="#" onclick="showTab('menu')">Menu</a>
+    <a href="#" onclick="showTab('contact')">Contact</a>
+  </nav>
+
+  <main>
+    <!-- Home -->
+    <section id="home">
+      <img src="2758e0bc-19cd-41da-a757-dfd9b2a1c4c8 (1).jpg" class="logo" alt="FiliPasta Logo" />
+      <p class="menu-desc" style="font-size: 20px; text-align: center;">
+        Filipasta is a groundbreaking fusion dish that combines the bold, savory flavors of Filipino cuisine with the comforting texture of Italian pasta. This innovative culinary creation brings together beloved Filipino classics like adobo, bicol express, and malunggay, blending them with pasta varieties such as spaghetti, penne, and fusilli. The result is a delicious and unexpected twist on traditional dishes, offering a new way to enjoy the rich, flavorful tastes of the Philippines in a globally recognized format.
+      </p>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="hidden">
+      <h2 class="section-title">Our Signature Dishes</h2>
+      <img src="90db541a-1ada-4b9a-9cf6-aa030885d173.jpg" class="menu-image" />
+      <p class="menu-desc">🌱 Malunggay Pesto: A vibrant and healthy take on classic pesto, infused with the goodness of malunggay.</p>
+
+      <img src="3b955e65-e0bf-48eb-9134-d03a2bec5a59.jpg" class="menu-image" />
+      <p class="menu-desc">🍗 Adobong Iga: Experience the rich, savory, and iconic taste of Filipino adobo in a comforting pasta dish.</p>
+
+      <img src="68865ec5-6306-4e8d-a7c3-34c06814bfa6.jpg" class="menu-image" />
+      <p class="menu-desc">🌶️ Bicol Express: For the spice lovers! Indulge in the creamy, coconutty, and fiery flavors of the beloved Bicol Express.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="hidden">
+      <img src="d3d0e429-6a18-437a-878a-a67d65fead76.jpg" class="contact-img" />
+      <div class="contact-info">
+        <p>
+          Craving your FillPasta con Salsa favorites but don't want to leave the house? 🛵💨 Good news! We've partnered with foodpanda to bring our delicious dishes right to your doorstep! 🎉<br><br>
+          Get your fix of Adobong Iga, Malunggay Pesto, Bicol Express, and more with just a few taps on your phone. Enjoy great food, delivered conveniently!<br><br>
+          Order now via the foodpanda app! 🐼
+        </p>
+      </div>
+      <div class="contact-info">
+        <strong>Contact:</strong> 0949 829 8916<br>
+        <strong>Location:</strong> 2nd Floor Food Court, Robinsons Lipa Jose P. Laurel Hwy, Lipa City, Batangas<br>
+        <strong>Social:</strong> @filipasta.con.salsa
+      </div>
+      <img src="5d25a467-d178-4d99-b0dd-140741c3b9fc.jpg" class="contact-img" />
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.classList.toggle("nav-open");
+    }
+
+    function showTab(tabId) {
+      const sections = document.querySelectorAll("main > section");
+      sections.forEach(section => {
+        section.classList.add("hidden");
+      });
+      document.getElementById(tabId).classList.remove("hidden");
+      document.getElementById("sideMenu").classList.remove("nav-open");
+    }
+  </script>
+</body>
+</html>
